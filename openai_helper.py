@@ -6,8 +6,8 @@ import pandas as pd
 client = OpenAI(api_key=openai_key)
 
 
-def extract_resume_data(text):
-    prompt = get_prompt_resume() + text
+def extract_finance_data(text):
+    prompt = get_prompt() + text
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
@@ -29,7 +29,7 @@ def extract_resume_data(text):
     })
 
 
-def get_prompt_resume():
+def get_prompt():
     return '''Please retrieve company name, revenue, net income and earnings per share (a.k.a. EPS)
         from the following news article. If you can't find the information from this article 
         then return "". Do not make things up.    
@@ -53,6 +53,6 @@ if __name__ == '__main__':
     text = '''
         Tesla's Earning news in text format: Tesla's earning this quarter blew all the estimates. They reported 4.5 billion $ profit against a revenue of 30 billion $. Their earnings per share was 2.3 $
         '''
-    df = extract_resume_data(text)
+    df = extract_finance_data(text)
 
     print(df.to_string())

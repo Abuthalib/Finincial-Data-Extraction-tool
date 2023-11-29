@@ -1,0 +1,28 @@
+{
+    "name": "John Doe",
+    "personal_details": {
+        "email": "johndoe@example.com",
+        "phone": "123-456-7890"
+    },
+    "qualifications": [
+        "Bachelor of Science in Computer Science",
+        "Master of Business Administration"
+    ],
+    "skills": [
+        "Programming: Python, Java, C++",
+        "Databases: MySQL, PostgreSQL",
+        "Machine Learning: TensorFlow, PyTorch"
+    ],
+    "experience": [
+        {
+            "company": "Google",
+            "title": "Software Engineer",
+            "dates": "2015-2020"
+        },
+        {
+            "company": "Amazon",
+            "title": "Data Scientist",
+            "dates": "2020-present"
+        }
+    ]
+}
